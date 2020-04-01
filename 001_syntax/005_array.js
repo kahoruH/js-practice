@@ -4,6 +4,7 @@
  */
 
 function printArray(array) {
+  console.log(array);
 }
 
 /**
@@ -22,6 +23,16 @@ function printArray(array) {
  *
  */
 function getDays() {
+  var array = [
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday"
+  ]
+  console.log(array);
 }
 
 /**
@@ -35,6 +46,12 @@ function getDays() {
  */
 
 function findNum(array, num) {
+  for(var i = 0; i < array.length; i++){
+    if(array[i] === num) {
+      return true;
+    }
+  }
+  return false;
 }
 
 /**

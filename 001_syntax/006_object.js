@@ -8,6 +8,11 @@
  */
 
 function getPersonObject() {
+  return {
+    name: 'Bob',
+    age: 32,
+    gender: 'male'
+  }
 }
 
 /**
@@ -25,6 +30,9 @@ function getPersonObject() {
  */
 
 function mutateObject(person) {
+  person.name = 'Mary';
+  person.age = '37';
+  person.gender = 'female';
 }
 
 /**
