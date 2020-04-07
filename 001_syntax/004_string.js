@@ -48,8 +48,26 @@ function substring(str, a, b) {
  */
 
 function isInclude(a, b) {
-  return a.includes("b");
+  return a.includes(b);
 }
+
+/*
+function isInclude(a, b) {
+  for(let i = 0; i < a.length; i++) {
+     if (b[0] === a[i]) { // 先頭の文字が一致したら
+       let str = b[0]
+       for (let j = 1; j < b.length; j++) { // 先頭の文字が一致した箇所から、全ての文字が一致するかを確認するループ
+         if (b[j] === a[i + j]) { 
+           str += b[j] // 文字が一致したら一文字ずつstrに追加
+         }
+       }
+       if (str === b) { // 上のループで全ての文字列が一致するか？
+         return true
+       }
+     }
+  }
+  return false
+}*/
 
 /**
  *  4.6 引数に与えられたアルファベットの文字列が回文であること
@@ -64,5 +82,9 @@ function isInclude(a, b) {
  */
 
 function isPalindrome(str) {
-  
+  const reversedStr = [];
+  for(let i = str.length - 1; 0 <=i; i--){
+    reversedStr.push(str[i])
+  }
+  return str === reversedStr.join('');
 }

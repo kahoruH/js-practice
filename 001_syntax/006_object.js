@@ -33,6 +33,7 @@ function mutateObject(person) {
   person.name = 'Mary';
   person.age = '37';
   person.gender = 'female';
+  return person;
 }
 
 /**
@@ -56,7 +57,17 @@ function mutateObject(person) {
  *
  */
 
+//再チャレンジ 4/7
 function assignNumber(persons) {
+  //let random = Math.random(); 0から1未満のランダムな少数値
+  //let random = Math.random() * 11; 0から10までのランダムな少数値
+
+  let object = {};
+  for (let i = 0; i < persons.length; i++) {
+    let random = Math.floor(Math.random() * 11); //floorメソッドで少数点以下を切り捨て
+    object[persons[i]] = random;
+  }
+  return object;
 }
 
 /**
@@ -70,5 +81,15 @@ function assignNumber(persons) {
  *
  */
 
+//再チャレンジ 4/7
 function isDuplicate(array) {
+  let num = {};
+  for(let i = 0; i < array.length; i++) {
+    for(let j = 1; j <  array.length; j++) {
+      if(num[array[i]] === num[array[j]]){
+        return true;
+      }
+    } 
+  }
+  return false;
 }

@@ -48,7 +48,7 @@ function getDay(day) {
   switch(day) {
     case 0:
       console.log('Sunday');
-      break;
+      break; //breakを書き忘れると、次のcase処理を続けて実行してしまう
 
     case 1:
       console.log('Monday');

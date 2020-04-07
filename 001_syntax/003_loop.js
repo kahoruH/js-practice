@@ -4,7 +4,7 @@
  */
 
 function printOneToTen() {
-  for(var i = 0; i <= 10; i++){
+  for(let i = 0; i <= 10; i++){ // 初期値;  条件式;  増減値
     console.log(i);
   }
 }
@@ -15,7 +15,7 @@ function printOneToTen() {
  */
 
 function printOneToTenDesc() {
-  for(var i = 10; i >= 0; i--){
+  for(let i = 10; i >= 0; i--){
     console.log(i);
   }
 }
@@ -26,8 +26,8 @@ function printOneToTenDesc() {
  */
 
 function printOneToTenWhile() {
-  var i = 0;
-  while(i <= 10){
+  let i = 0;
+  while(i <= 10) {
     console.log(i);
     i++;
   }

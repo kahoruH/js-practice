@@ -54,7 +54,9 @@ function subtractTwoArgs(a, b) {
  *
  */
 function quotientTwoArgs(a, b) {
-  b !== 0;
+  if(b === 0){
+    return null;
+  }
   return a / b;
 }
 
@@ -87,5 +89,5 @@ function isEven(a) {
  *
  */
 function concatString(a, b) {
-  return 'a' + 'b';
+  return a + b;
 }
